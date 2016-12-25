@@ -1,1 +1,1 @@
-# hadoop-training
+# Hadoop Fundamentals
