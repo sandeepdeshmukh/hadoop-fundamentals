@@ -1,4 +1,4 @@
-package org.apache.hadoop.mapreduce.wordcount;
+package com.zephyx.hadoop.mapreduce.wordcount;
 
 import java.io.IOException;
 

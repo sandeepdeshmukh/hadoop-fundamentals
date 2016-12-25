@@ -1,3 +1,6 @@
-Elixir Technogolies
-SimpliPi Technologies
-Elixir Systems
+Hadoop Fundamentals
+Hadoop Fundamentals for Executives
+Advanced Hadoop Programming
+Apache Apex 
+Data Science
+Understanding the Docker

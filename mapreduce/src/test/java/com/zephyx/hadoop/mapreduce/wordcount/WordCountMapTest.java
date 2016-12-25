@@ -1,4 +1,4 @@
-package org.apache.hadoop.mapreduce.wordcount;
+package com.zephyx.hadoop.mapreduce.wordcount;
 
 import java.io.IOException;
 
@@ -8,6 +8,8 @@ import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mrunit.mapreduce.MapDriver;
+
+import com.zephyx.hadoop.mapreduce.wordcount.WordCountMapper;
 
 public class WordCountMapTest
 {
