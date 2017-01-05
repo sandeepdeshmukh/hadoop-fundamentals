@@ -1,4 +1,4 @@
-package com.mindstrix.hadoop.mapreduce.DNA;
+package com.zephyx.hadoop.mapreduce.DNA;
 
 import java.io.IOException;
 

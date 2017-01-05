@@ -1,4 +1,4 @@
-package com.elixir.hadoop.mapreduce.numeric.summarization.minmaxcount;
+package com.zephyx.hadoop.mapreduce.numeric.summarization.minmaxcount;
 
 import java.io.DataInput;
 import java.io.DataOutput;

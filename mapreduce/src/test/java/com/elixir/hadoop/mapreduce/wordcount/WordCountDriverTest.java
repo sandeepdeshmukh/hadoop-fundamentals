@@ -1,12 +1,13 @@
 package com.elixir.hadoop.mapreduce.wordcount;
 
-import org.apache.hadoop.conf.Configuration;
-import org.apache.hadoop.fs.FileSystem;
-import org.apache.hadoop.fs.Path;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.elixir.hadoop.mapreduce.wordcount.WordCountDriver;
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FileSystem;
+import org.apache.hadoop.fs.Path;
+
+import com.zephyx.hadoop.mapreduce.wordcount.WordCountDriver;
 
 public class WordCountDriverTest {
 

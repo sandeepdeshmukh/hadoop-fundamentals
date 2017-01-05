@@ -1,4 +1,4 @@
-package com.mindstrix.hadoop.mapreduce.DNA;
+package com.zephyx.hadoop.mapreduce.DNA;
 
 import org.apache.hadoop.io.WritableComparable;
 import org.apache.hadoop.io.WritableComparator;

@@ -1,4 +1,4 @@
-package com.mindstix.hadoop.mapreduce.numeric.summarization.average;
+package com.zephyx.hadoop.mapreduce.numeric.summarization.average;
 
 import java.io.DataInput;
 import java.io.DataOutput;

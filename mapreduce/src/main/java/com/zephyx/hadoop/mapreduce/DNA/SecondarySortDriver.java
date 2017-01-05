@@ -1,4 +1,4 @@
-package com.mindstrix.hadoop.mapreduce.DNA;
+package com.zephyx.hadoop.mapreduce.DNA;
 
 import java.io.IOException;
 
@@ -33,7 +33,7 @@ public class SecondarySortDriver {
 
 		job.setPartitionerClass(SecondarySortPartitioner.class);
 		job.setSortComparatorClass(CompositeKeySortComparator.class);
-//		job.setGroupingComparatorClass(SecondarySortGroupingComparator.class);
+		job.setGroupingComparatorClass(SecondarySortGroupingComparator.class);
 
 		job.setOutputKeyClass(CompositeKey.class);
 		job.setOutputValueClass(NullWritable.class);
@@ -41,7 +41,7 @@ public class SecondarySortDriver {
 			FileInputFormat.addInputPath(job, new Path(otherArgs[i]));
 		}
 
-		job.setNumReduceTasks(CompositeKey.NUMBER_OF_CHROMOSOMES);
+//		job.setNumReduceTasks(CompositeKey.NUMBER_OF_CHROMOSOMES);
 
 		FileOutputFormat.setOutputPath(job, new Path(
 				otherArgs[otherArgs.length - 1]));

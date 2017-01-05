@@ -1,4 +1,4 @@
-package com.mindstrix.hadoop.mapreduce.DNA;
+package com.zephyx.hadoop.mapreduce.DNA;
 
 import org.apache.hadoop.io.NullWritable;
 import org.apache.hadoop.mapreduce.Partitioner;
