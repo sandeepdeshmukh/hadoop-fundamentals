@@ -19,35 +19,26 @@ public class CompositeKey implements Writable, WritableComparable<CompositeKey>{
 	public void setChrNo(int chrNo) {
 		this.chrNo = chrNo;
 	}
-	public int getPosition() {
+	public long getPosition() {
 		return position;
 	}
-	public void setPosition(int position) {
+	public void setPosition(long position) {
 		this.position = position;
 	}
 	int chrNo;
-	int position;
-	String read;
+	long position;
 
 	public CompositeKey() {
 	}
-	public CompositeKey(Text str){
-	
-		Random r = new Random();
-		chrNo = r.nextInt(NUMBER_OF_CHROMOSOMES);
-		position = r.nextInt(MAX_POS);
-		this.read = str.toString(); 
-	}
+
 	public void write(DataOutput out) throws IOException {
 		out.writeInt(chrNo);
-		out.writeInt(position);
-		out.writeUTF(read);
+		out.writeLong(position);
 		
 	}
 	public void readFields(DataInput in) throws IOException {
 		chrNo = in.readInt();
-		position = in.readInt();
-		read = in.readUTF();
+		position = in.readLong();
 	}
 	public int compareTo(CompositeKey o) {
 		// First compare for chromosome no
@@ -60,6 +51,6 @@ public class CompositeKey implements Writable, WritableComparable<CompositeKey>{
 	
 	@Override
 	public String toString() {
-		return chrNo+","+position+ "," + read ;
+		return chrNo+","+position + "," ;
 	}
 }

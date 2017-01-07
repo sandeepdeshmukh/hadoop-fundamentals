@@ -25,23 +25,22 @@ public class SecondarySortDriver {
 		job.setJarByClass(SecondarySortDriver.class);
 
 		job.setMapperClass(DNAMapper.class);
-		// job.setCombinerClass(DNAReducer.class);
 		job.setReducerClass(DNAReducer.class);
 
 		job.setMapOutputKeyClass(CompositeKey.class);
-		job.setMapOutputValueClass(NullWritable.class);
+		job.setMapOutputValueClass(CompositeValue.class);
 
 		job.setPartitionerClass(SecondarySortPartitioner.class);
 		job.setSortComparatorClass(CompositeKeySortComparator.class);
 		job.setGroupingComparatorClass(SecondarySortGroupingComparator.class);
 
 		job.setOutputKeyClass(CompositeKey.class);
-		job.setOutputValueClass(NullWritable.class);
+		job.setOutputValueClass(CompositeValue.class);
 		for (int i = 0; i < otherArgs.length - 1; ++i) {
 			FileInputFormat.addInputPath(job, new Path(otherArgs[i]));
 		}
 
-//		job.setNumReduceTasks(CompositeKey.NUMBER_OF_CHROMOSOMES);
+		job.setNumReduceTasks(CompositeKey.NUMBER_OF_CHROMOSOMES);
 
 		FileOutputFormat.setOutputPath(job, new Path(
 				otherArgs[otherArgs.length - 1]));

@@ -7,13 +7,13 @@ import org.apache.hadoop.mapreduce.Reducer;
 
 
 public  class DNAReducer 
-     extends Reducer<CompositeKey,NullWritable,CompositeKey, NullWritable> {
+     extends Reducer<CompositeKey,CompositeValue,CompositeKey, CompositeValue> {
 
-	public void reduce(CompositeKey key, Iterable<NullWritable> values, 
+	public void reduce(CompositeKey key, Iterable<CompositeValue> values, 
                      Context context
                      ) throws IOException, InterruptedException {
-    for (NullWritable val : values) {
-    	context.write(key, NullWritable.get());
+    for (CompositeValue val : values) {
+    	context.write(key, val);
     }
   }
 }
