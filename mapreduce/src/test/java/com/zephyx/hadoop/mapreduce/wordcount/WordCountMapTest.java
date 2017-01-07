@@ -16,26 +16,26 @@ public class WordCountMapTest
   @Test
   public void processesValidRecord() throws IOException, InterruptedException
   {
-    Text value = new Text("Hadoop");
+    Text value = new Text("5");
 		new MapDriver<LongWritable, Text, Text, IntWritable>()
 				.withMapper(new WordCountMapper())
 				.withInput(new LongWritable(1), value)
-				.withOutput(value, new IntWritable(1))
+				.withOutput(new Text("Odd"), new IntWritable(1))
 				.runTest();
 	}
 
   @Test
   public void anotherTest() throws IOException, InterruptedException
   {
-  	Text value = new Text("Hadoop Fundamentals Hadoop is Great");
+  	Text value = new Text("3 7 9 2 4");
 		new MapDriver<LongWritable, Text, Text, IntWritable>()
 		.withMapper(new WordCountMapper())
 		.withInput(new LongWritable(1), value)
-		.withOutput(new Text("Hadoop"), new IntWritable(1))
-		.withOutput(new Text("Fundamentals"), new IntWritable(1))
-		.withOutput(new Text("Hadoop"), new IntWritable(1))
-		.withOutput(new Text("is"), new IntWritable(1))
-		.withOutput(new Text("Great"), new IntWritable(1))
+		.withOutput(new Text("Odd"), new IntWritable(1))
+		.withOutput(new Text("Odd"), new IntWritable(1))
+		.withOutput(new Text("Odd"), new IntWritable(1))
+		.withOutput(new Text("Even"), new IntWritable(1))
+		.withOutput(new Text("Even"), new IntWritable(1))
 		.runTest(true); // true - order of words. Try with false and change order above.
 	}
   

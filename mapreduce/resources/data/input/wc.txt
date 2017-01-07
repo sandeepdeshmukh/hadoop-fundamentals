@@ -1,6 +1,3 @@
-Hadoop Fundamentals
-Hadoop Fundamentals for Executives
-Advanced Hadoop Programming
-Apache Apex 
-Data Science
-Understanding the Docker
+2 3 7 11 14
+6 98 34 23 45 66
+23 56 43 87 56
